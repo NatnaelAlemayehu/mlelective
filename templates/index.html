@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Overall Class Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Age" placeholder="Age" required="required" />
+        <input type="text" name="Potential" placeholder="Potential" required="required" />
+		<input type="text" name="Value" placeholder="Value" required="required" />
+		<input type="text" name="Wage" placeholder="Wage" required="required" />
+        <input type="text" name="Special" placeholder="Special" required="required" />
+        <input type="text" name="InternationalReputation" placeholder="InternationalReputation" required="required" />
+		<input type="text" name="SkillMoves" placeholder="SkillMoves" required="required" />
+		<input type="text" name="ShortPassing" placeholder="ShortPassing" required="required" />
+        <input type="text" name="Curve" placeholder="Curve" required="required" />
+        <input type="text" name="LongPassing" placeholder="LongPassing" required="required" />
+		<input type="text" name="BallControl" placeholder="BallControl" required="required" />
+		<input type="text" name="Reactions" placeholder="Reactions" required="required" />
+        <input type="text" name="ShotPower" placeholder="ShotPower" required="required" />
+        <input type="text" name="LongShots" placeholder="LongShots" required="required" />
+        <input type="text" name="Vision" placeholder="Vision" required="required" />
+		<input type="text" name="Composure" placeholder="Composure" required="required" />
+		<input type="text" name="ReleaseClause" placeholder="ReleaseClause" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
+
